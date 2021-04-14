@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>HaurakiSandBlasting</title>
+      <title>Sandblasting | Hauraki Sandblasting Ltd</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -273,16 +273,16 @@ margin-right: auto;position: relative;">
                         <div class="text-content">
                             <h2 style="    font-size: 1.500rem;">BOOK A JOB</h2>
                             <div>
-                        <form action="action_page.php">
+                        <form action="{{ url_for('message') }}" enctype="multipart/form-data" method="POST">
                       
                           <label for="fname">Name</label>
-                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                          <input type="text" id="name" name="name" placeholder="Your name..">
                       
                           <label for="email">Email</label>
-                          <input type="text" id="lname" name="email" placeholder="Your email..">
+                          <input type="text" id="email" name="email" placeholder="Your email..">
                       
                           <label for="phone">Phone</label>
-                          <input type="text" id="lname" name="phone" placeholder="Your number..">
+                          <input type="text" id="phone" name="phone" placeholder="Your number..">
 
                           <label for="items">How did you hear about us ?</label>
                           <select id="item" name="item">
@@ -319,7 +319,7 @@ margin-right: auto;position: relative;">
                     </div></div></div>
                 </section>
 
-                
+
       <!--  footer -->
       <footer>
          <div class="footer" style="background-color: #545454;">
