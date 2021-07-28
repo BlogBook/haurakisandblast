@@ -16,9 +16,9 @@ $(function () {
 	/* JQuery Menu
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
-	$(document).ready(function () {
-		$('header nav').meanmenu();
-	});
+	// $(document).ready(function () {
+	// 	$('header nav').meanmenu();
+	// });
 
 	/* Tooltip
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
@@ -58,9 +58,9 @@ $(function () {
 	/* NiceSelect
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
-	$(document).ready(function () {
-		$('select').niceSelect();
-	});
+	// $(document).ready(function () {
+	// 	$('select').niceSelect();
+	// });
 
 	/* OwlCarousel - Blog Post slider
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
