@@ -34,7 +34,7 @@ def message():
         subject = request.form.get('subject')
         msg = Message('Hello', sender = 'support@thegeeks.co.nz', recipients = ['dave@haurakisandblasting.co.nz'])
         msg.body = "New message from User"
-        msg.html="<b>"+name+"<br> Email:"+email+"<br> Number"+number+"<br> Hear about us:"+item+"<br> Detail:"+subject
+        msg.html="Name: "+name+"<br> Email: "+email+"<br> Number: "+number+"<br> Hear about us:"+item+"<br> Detail:"+subject
         mail.send(msg)
         return render_template("home.html")
 
