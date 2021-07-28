@@ -9,15 +9,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 app = Flask(__name__,template_folder='src/templates',static_folder='src/static')
-mail = Mail(app)
+
 
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'support@thegeeks.co.nz'
 app.config['MAIL_PASSWORD'] = 'support@thegeeks.co.nz'
-app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 
 @app.route('/')
 def hello():
@@ -33,7 +34,7 @@ def message():
         subject = request.form.get('subject')
         msg = Message('Hello', sender = 'support@thegeeks.co.nz', recipients = ['dave@haurakisandblasting.co.nz'])
         msg.body = "New message from User"
-        # msg.html="<b>"+name+"<br> Email:"+email+"<br> Number"+number+"<br> Hear about us:"+item+"<br> Detail:"+subject
+        msg.html="<b>"+name+"<br> Email:"+email+"<br> Number"+number+"<br> Hear about us:"+item+"<br> Detail:"+subject
         mail.send(msg)
         return render_template("home.html")
 
