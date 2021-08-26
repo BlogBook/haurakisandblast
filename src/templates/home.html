@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
       <title>Sandblasting | Hauraki Sandblasting Ltd</title>
@@ -41,8 +41,8 @@
         }
         .column1 {
           float: left;
-          width: 33.33%;
-          padding: 15px;
+          width: 50%;
+          padding: 5px;
         }
         /* Clearfix (clear floats) */
         .row::after {
@@ -50,7 +50,22 @@
           clear: both;
           display: table;
         }
+        @media screen and (max-width: 992px) {
+          .column1 {
+          float: left;
+          width: 50%;
+          padding: 5px;
+        }
+}
 
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+          float: left;
+          width: 50%;
+          padding: 5px;
+        }
+}
 /* .stack.stack--vertical-top .column {
     justify-content: flex-start;
 } */
@@ -115,13 +130,13 @@ input[type=submit]:hover {
       <header>
          <!-- header inner -->
          <div class="header-top">
-            <div class="header" style="background-color:#ededed"> 
+            <div class="header" >
                                 
                         <div class="menu-area">                         
                               <nav class="main-menu">
                                  <ul class="menu-area-main">
                                     <li class="active">                                        
-                                            <a href="https://www.facebook.com/Hauraki-Sandblasting-Services-102039101494391/" class="fa fa-facebook"></a> </li>
+                                            <a href="https://www.facebook.com/Hauraki-Sandblasting-Services-102039101494391/" class="fa fa-facebook" target="_blank"></a> </li>
                                  </ul>                              
                               </nav>
                               <div class="logo">
@@ -139,7 +154,9 @@ input[type=submit]:hover {
     <div class="container">
         <div class="row">
             <div class="grid_9">
-           <figure> <img src="../static/images/div_img.jpg" alt="Norway" style="width:20%;float:left">
+           <figure> <img src="../static/images/div_img.jpg" alt="Norway" style="width: 100%;
+            max-width: 400px;
+            height: auto;">
             <div class="content" style="display: block;">
                 <h1 class="title" style="font-family: chnj,Arial;
                 font-weight: 500;
@@ -236,12 +253,12 @@ margin-right: auto;position: relative;">
                
                <div class="column">
                  <p style="padding-bottom: 0;"> 
-                    "You guys did a great job sandblasting and refinishing our $1.2 million forestry hauler. It was great working with Rob, and we had a quick turnaround on the job - thanks"
+                    You guys did a great job sandblasting and refinishing our $1.2 million forestry hauler. It was great working with Rob, and we had a quick turnaround on the job - Thanks
                  </p>
                </div>
                <div class="column">
                 <p style="padding-bottom: 0;"> 
-                    "Dave was awesome to deal with when we needed our fleet of trailers sandblasted and painted - they look great and passed our VTNZ inspections without any hassle." 
+                    Dave was awesome to deal with when we needed our fleet of trailers sandblasted and painted - they look great and passed our VTNZ inspections without any hassle.
                  </p>
                </div>
            
@@ -261,8 +278,8 @@ margin-right: auto;position: relative;">
             <div class="container" style="display: flex;">
                <!-- <div class="row" style="position: relative;"> -->
                    
-                   <div class="column">
-                      <div class="column">
+                   <div class="column" style="display: flex;">
+                      <div class="column" >
                           <div class="text-content">
                               <h2 style="    font-size: 1.500rem;">CONTACT</h2>
                               <div>
@@ -274,13 +291,19 @@ margin-right: auto;position: relative;">
                                       0277145000
                                       <br>
                                   </p>
-                                  <p><strong style="font-weight: 700;">General Manager:<br></strong>dave@haurakisandblasting.co.nz</p>
+                                  <p>
+                                    <strong style="font-weight: 700;">
+                                      General Manager:
+                                      <br>
+                                    </strong>
+                                    dave@haurakisandblasting.co.nz
+                                  </p>
                               </div>
                           </div>
                       </div>
                    </div>
-                   <div class="column">
-                    <div class="column">
+                   <div class="column1" style="display: flex;">
+                    <div class="column1" style="display: flex;">
                         <div class="text-content">
                             <h2 style="    font-size: 1.500rem;">LOCATION</h2>
                             <div>
@@ -298,10 +321,13 @@ margin-right: auto;position: relative;">
                         </div>
                     </div>
                    </div>
-                   <div class="column">
-                    <div class="container" style="border-radius: 5px;
+            </div>
+<br>
+            <!-- Contact Us Form -->
+            <div class="container" style="display: flex;">
+                    <div class="container" style="display: flex;
                     background-color: #f2f2f2;
-                    padding: 20px;">
+                    ">
                         <div class="text-content">
                             <h2 style="    font-size: 1.500rem;">BOOK A JOB</h2>
                             <div>
@@ -339,7 +365,7 @@ margin-right: auto;position: relative;">
                   </div>
                
                  </div>
-               </div></section>
+            </div></section>
 
 
                <!-- <section>
